@@ -3,6 +3,7 @@
  * Show videos and social posts directly on your page
  * https://www.hlx.live/developer/block-collection/embed
  */
+import { buildBlock } from '../../scripts/scripts.js';
 
 const loadScript = (url, callback, type) => {
     const head = document.querySelector('head');
