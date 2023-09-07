@@ -138,7 +138,7 @@ function buildVideoBlock(main){
   const url= main.querySelector('a').href;
   
   if(image && url  && (image.compareDocumentPosition(image) & Node.DOCUMENT_POSITION_PRECEDING)) {
-  const section = document.craeteElement('div');
+  const section = document.createElement('div');
   section.append(buildBlock('embed' , {elems:[image, url]}));
   main.prepend(section);
   }
