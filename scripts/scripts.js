@@ -133,3 +133,13 @@ async function loadPage() {
 }
 
 loadPage();
+function buildVideoBlock(main){
+  const  image= main.querySelector('picture');
+  const url= main.querySelector('a').href;
+  
+  if(image && url  && (image.compareDocumentPosition(image) & Node.DOCUMENT_POSITION_PRECEDING)) {
+  const section = document.craeteElement('div');
+  section.append(buildBlock('embed' , {elems:[image, url]}));
+  main.prepend(section);
+  }
+  }
